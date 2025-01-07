@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MQTT Subscriber</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        h2 {
+            color: #1a237e;
+            margin-bottom: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #283593;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #e8eaf6;
+        }
+    </style>
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+</head>
+
+<body>
+    <h2 id="title">Diesel Generator Monitoring</h2>
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th>Parameters</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody id="mqtt-data">
+            <!-- MQTT data will be dynamically added here -->
+        </tbody>
+    </table>
+
+    <script>
+        const client = mqtt.connect('ws://broker.hivemq.com:8000/mqtt');
+
+        client.on('message', (topic, payload) => {
+            const mqttData = document.getElementById('mqtt-data');
+            const row = document.createElement('tr');
+            const cell1 = document.createElement('td');
+            const cell2 = document.createElement('td');
+
+            cell1.textContent = topic;
+            cell2.textContent = payload.toString();
+
+            row.appendChild(cell1);
+            row.appendChild(cell2);
+
+            mqttData.appendChild(row);
+        });
+
+        // Subscribe to the desired MQTT topics
+        client.subscribe('Status');
+        client.subscribe('time');
+        client.subscribe('Battery Voltage (V)');
+        client.subscribe('Coolant Temperature (°C)');
+        client.subscribe('Engine Speed (RPM)');
+        client.subscribe('Generator Avg Frequency (Hz)');
+    </script>
+</body>
+
+</html>
