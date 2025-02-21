@@ -4,7 +4,21 @@ A machine learning-based solution for predicting maintenance needs and monitorin
 
 ## 📊 Project Overview
 
-This project implements a predictive maintenance system for diesel generators using machine learning algorithms to analyze time series data. The system monitors critical parameters and predicts potential issues before they cause failures, reducing downtime and maintenance costs.
+This project implements a predictive maintenance system for diesel generators using machine learning algorithms to analyze time series data. The system monitors critical parameters 
+such as:
+
+1. **Coolant Temperature**  
+2. **Oil Pressure**  
+3. **Vibration Levels**  
+4. **Exhaust Gas Temperature**  
+5. **Fuel Consumption Rate**  
+6. **Battery Voltage**  
+7. **Engine Speed (RPM)**  
+8. **Load Current**  
+9. **Frequency (Hz)**  
+10. **Running Hours**
+
+The machine learning model predicts potential issues like the ones listed above, before they cause failures, reducing downtime and maintenance costs.
 
 ### 🎯 Key Features
 - Machine learning models for predictive analytics
@@ -55,6 +69,7 @@ The system evaluates multiple algorithms to find the optimal predictive model:
 Python 3.7+
 pandas
 scikit-learn
+seaborn
 paho-mqtt (for MQTT communication)
 matplotlib (for visualization)
 ```
@@ -82,10 +97,31 @@ python predicting.py
 
 ## 🔮 Future Work
 
-- Integration with mobile alert systems
-- Expanded parameter monitoring
-- Edge computing implementation for remote generators
-- Transfer learning for different generator models
+### Data Engineering & Big Data Integration
+- **Real-time Streaming Architecture**:
+  - Implement Apache Kafka for high-throughput, fault-tolerant data streaming
+  - Build real-time analytics with Kafka Streams or Apache Flink
+
+- **Workflow Orchestration**:
+  - Migrate to Apache Airflow for robust pipeline scheduling and monitoring
+  - Implement DAGs for complex maintenance prediction workflows
+
+- **Big Data Processing**:
+  - Scale to distributed computing with Apache Spark for handling fleet-wide generator data
+  - Implement batch processing with Hadoop ecosystem for historical analysis
+
+- **Data Warehousing & Storage**:
+  - Implement Snowflake data warehouse for flexible scaling and analytics
+  - Utilize AWS S3 for cost-effective long-term storage of sensor data
+
+- **Cloud Infrastructure**:
+  - Migrate to AWS cloud infrastructure (EC2, Lambda, SageMaker)
+  - Implement containerization with Docker and Kubernetes for deployments
+
+- **Advanced Analytics**:
+  - Develop a data lake architecture for combining structured and unstructured maintenance data
+  - Implement dbt (data build tool) for analytics engineering and transformation
+
 
 ## 📝 Project Information
 
