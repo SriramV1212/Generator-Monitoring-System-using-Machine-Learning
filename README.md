@@ -137,17 +137,14 @@ python predicting.py
 - **Institution**: SSN College of Engineering
 - **Contributors**: [Sriram Vivek , Sethuram Gautham Rajakumar]
 
-## 📊 Demo
-
-![System Dashboard](https://via.placeholder.com/800x400?text=Dashboard+Screenshot)
 
 ## 📫 Contact
 
 Feel free to reach out if you have any questions or would like to collaborate!
 
-- [Your Email]
-- [Your LinkedIn]
-- [Your Portfolio]
+- Email: sriram.vivek@stonybrook.edu
+- LinkedIn: https://www.linkedin.com/in/sriram-vivek-58a673269/
+
 
 ---
 
