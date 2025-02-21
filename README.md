@@ -129,6 +129,19 @@ python predicting.py
 - **Advanced Analytics**:
   - Develop a data lake architecture for combining structured and unstructured maintenance data
   - Implement dbt (data build tool) for analytics engineering and transformation
+ 
+## Demo
+### Dashboard Visualization
+![Dashboard Screenshot](./image1.jpeg)
+*Real-time monitoring dashboard showing generator parameters*
+
+### Model Performance Visualization
+![Model Accuracy Graph](./assets/accuracy_comparison.png)
+*Comparison of different ML algorithms with Random Forest achieving 90.56% accuracy*
+
+### Video Demonstration
+[![Diesel Generator Monitoring Demo](./assets/video_thumbnail.png)](./assets/demo_video.mp4)
+*Click to watch the demo video of the system in action*
 
 
 ## 📝 Project Information
