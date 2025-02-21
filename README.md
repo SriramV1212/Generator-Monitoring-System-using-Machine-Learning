@@ -53,7 +53,7 @@ The system evaluates multiple algorithms to find the optimal predictive model:
 - `test.html` - Web dashboard for real-time monitoring
 
 ### Data Flow
-1. Time series data collection from diesel generator sensors
+1. Data collection from diesel generator sensors
 2. Data preprocessing and feature engineering
 3. Model training and evaluation
 4. Real-time data transmission via MQTT
@@ -135,7 +135,7 @@ python predicting.py
 
 - **Development Period**: August 2023 - May 2024
 - **Institution**: SSN College of Engineering
-- **Contributors**: [Your Name]
+- **Contributors**: [Sriram Vivek , Sethuram Gautham Rajakumar]
 
 ## 📊 Demo
 
