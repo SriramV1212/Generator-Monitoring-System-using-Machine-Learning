@@ -132,11 +132,11 @@ python predicting.py
  
 ## Demo
 ### Dashboard Visualization
-![Dashboard Screenshot](./image1.jpeg)
+![Dashboard Screenshot](./image1.png)
 *Real-time monitoring dashboard showing generator parameters*
 
 ### Model Performance Visualization
-![Model Accuracy Graph](./assets/accuracy_comparison.png)
+![Model Accuracy Graph](./image2.png)
 *Comparison of different ML algorithms with Random Forest achieving 90.56% accuracy*
 
 ### Video Demonstration
